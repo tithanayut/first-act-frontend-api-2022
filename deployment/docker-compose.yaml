@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  traefik:
+    image: traefik:v2.7
+    container_name: traefik
+    restart: always
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik/traefik.toml:/traefik.toml
+      - ./traefik/acme.json:/acme.json
+    networks:
+      - traefik
+  minireg-api:
+    image: ghcr.io/tithanayut/minireg-api:main
+    container_name: minireg-api
+    restart: always
+    networks:
+      - traefik
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.minireg-api.rule=Host(`minireg.thinc.in.th`)
+      - traefik.http.routers.minireg-api.tls=true
+      - traefik.http.routers.minireg-api.tls.certresolver=letsencrypt
+
+networks:
+  traefik:
