@@ -25,7 +25,7 @@ export class CourseController {
     type: ErrorDTO,
     description: 'Internal Server Error',
   })
-  @ApiQuery({ name: 'genEdType', enum: GenEdType })
+  @ApiQuery({ name: 'genEdType', enum: GenEdType, required: false })
   findAll(@Query('genEdType') genEdType?: GenEdType) {
     return this.courseService.findAll(genEdType);
   }
