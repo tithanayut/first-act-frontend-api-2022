@@ -13,15 +13,15 @@ services:
       - ./traefik/acme.json:/acme.json
     networks:
       - traefik
-  minireg-api:
-    image: ghcr.io/tithanayut/minireg-api:main
-    container_name: minireg-api
+  firstact-api:
+    image: ghcr.io/thinc-org/first-act-frontend-api-2022:main
+    container_name: firstact-api
     restart: always
     networks:
       - traefik
     labels:
       - traefik.enable=true
-      - traefik.http.routers.minireg-api.rule=Host(`minireg.thinc.in.th`)
+      - traefik.http.routers.minireg-api.rule=Host(`firstact-api.thinc.in.th`)
       - traefik.http.routers.minireg-api.tls=true
       - traefik.http.routers.minireg-api.tls.certresolver=letsencrypt
 

@@ -18,4 +18,5 @@
 [certificatesResolvers.letsencrypt.acme]
   email = "admin@thanayut.in.th"
   storage = "acme.json"
-  [certificatesResolvers.letsencrypt.acme.tlsChallenge]
+  [certificatesResolvers.letsencrypt.acme.httpChallenge]
+    entrypoint = "web"
