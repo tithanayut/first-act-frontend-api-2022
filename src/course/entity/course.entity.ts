@@ -26,6 +26,9 @@ export class Course {
   @ApiProperty({ enum: GenEdType, example: GenEdType.NO })
   genEdType: GenEdType;
 
+  @ApiProperty({ example: 40 })
+  totalSeats: number;
+
   @ApiProperty({ example: '2022-09-07T05:55:49.427Z' })
   updatedAt: string;
 }

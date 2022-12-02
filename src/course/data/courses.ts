@@ -11,6 +11,7 @@ export const courses: Course[] = [
     credit: 3,
     creditHours: 'LECT 1.0 CR + NL23 2.0 CR(LECT 1.0 HR + PRAC 4.0 HR)',
     genEdType: GenEdType.HU,
+    totalSeats: 40,
     updatedAt: '2022-09-07T05:55:49.377Z',
   },
   {
@@ -23,6 +24,7 @@ export const courses: Course[] = [
     creditHours:
       'LECT 2.0 CR + NL23 1.0 CR(LECT 1.0 HR + DISC 1.0 HR + PRAC 3.0 HR)',
     genEdType: GenEdType.IN,
+    totalSeats: 40,
     updatedAt: '2022-09-07T05:55:49.377Z',
   },
   {
@@ -34,6 +36,7 @@ export const courses: Course[] = [
     credit: 3,
     creditHours: 'LECT 3.0 CR (S/U)(LECT 1.0 HR + DISC 2.0 HR)',
     genEdType: GenEdType.IN,
+    totalSeats: 40,
     updatedAt: '2022-09-07T05:55:49.378Z',
   },
   {
@@ -45,6 +48,7 @@ export const courses: Course[] = [
     credit: 3,
     creditHours: 'LECT 3.0 CR (S/U)(LECT 3.0 HR)',
     genEdType: GenEdType.IN,
+    totalSeats: 9,
     updatedAt: '2022-09-07T05:55:49.378Z',
   },
   {
@@ -56,6 +60,7 @@ export const courses: Course[] = [
     credit: 3,
     creditHours: 'LECT 3.0 CR(LECT 3.0 HR)',
     genEdType: GenEdType.NO,
+    totalSeats: 400,
     updatedAt: '2022-09-07T05:55:49.404Z',
   },
   {
@@ -67,6 +72,7 @@ export const courses: Course[] = [
     credit: 3,
     creditHours: 'LECT 3.0 CR(LECT 3.0 HR)',
     genEdType: GenEdType.SC,
+    totalSeats: 100,
     updatedAt: '2022-09-07T05:55:49.421Z',
   },
   {
@@ -78,6 +84,7 @@ export const courses: Course[] = [
     credit: 3,
     creditHours: 'LECT 3.0 CR(LECT 2.0 HR + DISC 1.0 HR)',
     genEdType: GenEdType.SC,
+    totalSeats: 9,
     updatedAt: '2022-09-07T05:55:49.421Z',
   },
   {
@@ -89,6 +96,7 @@ export const courses: Course[] = [
     credit: 3,
     creditHours: 'LECT 3.0 CR(LECT 3.0 HR)',
     genEdType: GenEdType.NO,
+    totalSeats: 480,
     updatedAt: '2022-09-07T05:55:49.427Z',
   },
   {
@@ -100,6 +108,7 @@ export const courses: Course[] = [
     credit: 3,
     creditHours: 'LECT 3.0 CR(LECT 2.0 HR + DISC 1.0 HR)',
     genEdType: GenEdType.HU,
+    totalSeats: 40,
     updatedAt: '2022-09-07T05:55:49.457Z',
   },
   {
@@ -111,6 +120,7 @@ export const courses: Course[] = [
     credit: 3,
     creditHours: 'LECT 3.0 CR(LECT 3.0 HR)',
     genEdType: GenEdType.NO,
+    totalSeats: 1800,
     updatedAt: '2022-09-07T05:55:49.466Z',
   },
   {
@@ -122,6 +132,7 @@ export const courses: Course[] = [
     credit: 1,
     creditHours: 'NL23 1.0 CR(LAB 3.0 HR)',
     genEdType: GenEdType.NO,
+    totalSeats: 2000,
     updatedAt: '2022-09-07T05:55:49.466Z',
   },
   {
@@ -133,6 +144,7 @@ export const courses: Course[] = [
     credit: 3,
     creditHours: 'LECT 2.0 CR + NL23 1.0 CR(LECT 2.0 HR + LAB 2.0 HR)',
     genEdType: GenEdType.SO,
+    totalSeats: 460,
     updatedAt: '2022-09-07T05:55:49.860Z',
   },
 ];
