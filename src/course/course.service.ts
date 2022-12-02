@@ -7,23 +7,35 @@ import { courses } from './data/courses';
 
 @Injectable()
 export class CourseService {
-  findAll(genEdType?: string) {
+  findAll(genEdType?: string, minSeats?: number, maxSeats?: number) {
+    let filteredCourses = courses;
+
     if (genEdType) {
       if (!['HU', 'SC', 'SO', 'IN', 'NO'].includes(genEdType))
         throw new BadRequestException('genEdType is invalid');
-      return {
-        studyProgram: 'S',
-        semester: '1',
-        academicYear: '2565',
-        courses: courses.filter((course) => course.genEdType === genEdType),
-      };
+      filteredCourses = filteredCourses.filter(
+        (course) => course.genEdType === genEdType,
+      );
+    }
+
+    if (minSeats) {
+      if (minSeats < 0) throw new BadRequestException('minSeats is invalid');
+      filteredCourses = filteredCourses.filter(
+        (course) => course.totalSeats >= minSeats,
+      );
+    }
+    if (maxSeats) {
+      if (maxSeats < 0) throw new BadRequestException('maxSeats is invalid');
+      filteredCourses = filteredCourses.filter(
+        (course) => course.totalSeats <= maxSeats,
+      );
     }
 
     return {
       studyProgram: 'S',
       semester: '1',
       academicYear: '2565',
-      courses,
+      courses: filteredCourses,
     };
   }
 

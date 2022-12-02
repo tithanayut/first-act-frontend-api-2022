@@ -26,8 +26,14 @@ export class CourseController {
     description: 'Internal Server Error',
   })
   @ApiQuery({ name: 'genEdType', enum: GenEdType, required: false })
-  findAll(@Query('genEdType') genEdType?: GenEdType) {
-    return this.courseService.findAll(genEdType);
+  @ApiQuery({ name: 'minSeats', required: false })
+  @ApiQuery({ name: 'maxSeats', required: false })
+  findAll(
+    @Query('genEdType') genEdType?: GenEdType,
+    @Query('minSeats') minSeats?: number,
+    @Query('maxSeats') maxSeats?: number,
+  ) {
+    return this.courseService.findAll(genEdType, minSeats, maxSeats);
   }
 
   @Get(':courseNo')
